@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Paper } from "@material-ui/core";
-import { red } from '@material-ui/core/colors';
+import { Grid } from "@material-ui/core";
 import LeftPane from "../Exercises/LeftPane.js"
 import RightPane from "../Exercises/RightPane.js"
 

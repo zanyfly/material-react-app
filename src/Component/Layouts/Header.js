@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { AppBar, Typography } from '@material-ui/core'
 import Toolbar from "@material-ui/core/Toolbar";
 import CreateFormDialog from '../Exercises/Dialog/CreateFormDialog'

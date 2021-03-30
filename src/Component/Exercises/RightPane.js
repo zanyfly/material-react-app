@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Paper, Typography } from "@material-ui/core";
 import Form from './Pub/Form'
 

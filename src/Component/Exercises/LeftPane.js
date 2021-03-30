@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 import { Paper, Typography, List, ListItem, ListItemText, ListItemSecondaryAction, IconButton } from "@material-ui/core";
-import { detailData } from '../../store';
 import { DeleteOutlineOutlined, EditOutlined } from '@material-ui/icons';
 
 export default (props) => {
@@ -9,7 +8,7 @@ export default (props) => {
     return (
         <Paper style={styles.paper}>
             {newData.map((item, index) =>
-                (selectedData == "" || item[0] === selectedData) ?
+                (selectedData === "" || item[0] === selectedData) ?
                     <Fragment key={"main" + index}>
                         <Typography variant="h5">{item[0]}</Typography>
                         <List key={"L" + index}>
