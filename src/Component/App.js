@@ -29,7 +29,7 @@ export class App extends Component {
   }
 
   handleDetail = (id) => {
-
+  
     this.setState((prevState) => (
       {
         ...prevState.detailData,
@@ -59,7 +59,7 @@ export class App extends Component {
       // ...prevState.detailData,
        return {
         detailData: [
-          ...prevState.detailData.filter(item=>item.id != obj.id),
+          ...prevState.detailData.filter(item=>item.id !== obj.id),
           obj
         ]
        } 
@@ -85,6 +85,13 @@ export class App extends Component {
     // })
   }
 
+  handleDelete = (id) => {
+    console.log("handleDelete " + id)
+    this.setState((prevState)=>({
+      detailData: prevState.detailData.filter(item => item.id !== id),
+    }))
+  }
+
   render() {
     const newData = this.createData()
     console.log("newData =" + newData)
@@ -99,6 +106,7 @@ export class App extends Component {
           onDetail={this.handleDetail}
           isEdit={this.state.isEdit}
           onEdit={this.handleEdit}
+          onDelete={this.handleDelete}
           oneData={this.state.oneData}
           onFormUpdate={this.handleFormUpdate}
           ></Content>
